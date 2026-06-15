@@ -1,0 +1,31 @@
+{
+  "app": {
+    "name": "ConversionOS",
+    "tagline": "Conversion Intelligence Platform"
+  },
+  "auth": {
+    "signIn": "Sign in",
+    "signOut": "Sign out",
+    "signUp": "Create account",
+    "email": "Email address",
+    "password": "Password",
+    "forgotPassword": "Forgot password?",
+    "magicLink": "Send magic link",
+    "magicLinkSent": "Check your email for the login link.",
+    "loading": "Loading…"
+  },
+  "nav": {
+    "dashboard": "Dashboard",
+    "projects": "Projects",
+    "settings": "Settings"
+  },
+  "common": {
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "loading": "Loading…",
+    "error": "Something went wrong.",
+    "success": "Done!"
+  }
+}

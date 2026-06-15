@@ -1,0 +1,31 @@
+{
+  "app": {
+    "name": "ConversionOS",
+    "tagline": "Plataforma de Inteligencia de Conversión"
+  },
+  "auth": {
+    "signIn": "Iniciar sesión",
+    "signOut": "Cerrar sesión",
+    "signUp": "Crear cuenta",
+    "email": "Correo electrónico",
+    "password": "Contraseña",
+    "forgotPassword": "Olvidé mi contraseña",
+    "magicLink": "Enviar enlace mágico",
+    "magicLinkSent": "Revisa tu correo para el enlace de acceso.",
+    "loading": "Cargando…"
+  },
+  "nav": {
+    "dashboard": "Panel",
+    "projects": "Proyectos",
+    "settings": "Configuración"
+  },
+  "common": {
+    "save": "Guardar",
+    "cancel": "Cancelar",
+    "delete": "Eliminar",
+    "edit": "Editar",
+    "loading": "Cargando…",
+    "error": "Algo salió mal.",
+    "success": "¡Listo!"
+  }
+}

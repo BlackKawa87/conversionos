@@ -1,0 +1,69 @@
+{
+  "greeting": {
+    "morning": "Good morning",
+    "afternoon": "Good afternoon",
+    "evening": "Good evening"
+  },
+  "sections": {
+    "heroDiagnosis": "Biggest Revenue Leak",
+    "actionPlan": "Action Plan",
+    "funnelHealth": "Funnel Health",
+    "projectReadiness": "Project Readiness",
+    "supportingMetrics": "Supporting Metrics",
+    "projects": "Projects"
+  },
+  "demo": {
+    "badge": "Demo data",
+    "heroBadge": "Sample diagnosis",
+    "metricsBadge": "Sample metrics",
+    "metricsNotice": "Install tracker to see real numbers",
+    "context": "vs. 58% industry benchmark for quiz funnels",
+    "insight": "Most users completing the quiz fail to reach the paywall. The gap between quiz completion and checkout is your biggest conversion opportunity.",
+    "hypothesis": "Mobile users cannot see the CTA without scrolling. The pricing block is 480px tall on mobile, pushing the purchase button below the fold.",
+    "action1": "Implement a sticky CTA on mobile",
+    "action2": "Reduce the pricing table to 3 core benefits",
+    "impact": "+18–24% conversion lift on this step",
+    "action1Title": "Shorten mobile paywall copy",
+    "action1Impact": "+18–24% CVR",
+    "action2Title": "Add sticky CTA above pricing",
+    "action2Impact": "+12% CTR",
+    "action3Title": "Split traffic by creative angle",
+    "action3Impact": "+8% ROAS",
+    "sessions": "2,840",
+    "completionRate": "28%",
+    "revenueAtRisk": "$4,320",
+    "sessionsTrend": "+12%",
+    "completionTrend": "-4%"
+  },
+  "funnelHealth": {
+    "title": "Funnel Health",
+    "sample": "Sample",
+    "sampleScore": "72",
+    "noDataTitle": "No tracking data yet",
+    "noDataDesc": "Install the tracker snippet to start measuring your funnel health in real time.",
+    "trackerCta": "View installation guide",
+    "scoreLabel": "Health score",
+    "criticalIssues": "Critical issues",
+    "activeSteps": "Active steps",
+    "sample3steps": "3 steps mapped",
+    "sample2issues": "2 critical issues"
+  },
+  "projectReadiness": {
+    "title": "Project setup",
+    "step": {
+      "created": "Project created",
+      "steps": "Funnel steps configured",
+      "snippet": "Snippet generated",
+      "tracker": "Tracker installed"
+    },
+    "pending": "Pending — Tracking Engine",
+    "configure": "Configure",
+    "noProjects": "No projects yet"
+  },
+  "metrics": {
+    "sessions": "Sessions",
+    "completionRate": "Completion rate",
+    "revenueAtRisk": "Revenue at risk",
+    "trend7d": "vs last 7 days"
+  }
+}

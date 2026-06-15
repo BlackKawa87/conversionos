@@ -1,0 +1,69 @@
+{
+  "greeting": {
+    "morning": "Buenos días",
+    "afternoon": "Buenas tardes",
+    "evening": "Buenas noches"
+  },
+  "sections": {
+    "heroDiagnosis": "Mayor Fuga de Ingresos",
+    "actionPlan": "Plan de Acción",
+    "funnelHealth": "Salud del Embudo",
+    "projectReadiness": "Estado del Proyecto",
+    "supportingMetrics": "Métricas de Soporte",
+    "projects": "Proyectos"
+  },
+  "demo": {
+    "badge": "Datos demo",
+    "heroBadge": "Diagnóstico de ejemplo",
+    "metricsBadge": "Métricas de ejemplo",
+    "metricsNotice": "Instala el tracker para ver números reales",
+    "context": "vs. 58% benchmark del sector para embudos de quiz",
+    "insight": "La mayoría de los usuarios que completan el quiz no llegan al paywall. La brecha entre la finalización del quiz y el checkout es tu mayor oportunidad de conversión.",
+    "hypothesis": "Los usuarios móviles no pueden ver el CTA sin hacer scroll. El bloque de precios tiene 480px de altura en móvil, enterrando el botón de compra bajo el fold.",
+    "action1": "Implementar CTA sticky en móvil",
+    "action2": "Reducir la tabla de precios a 3 beneficios clave",
+    "impact": "+18–24% lift de conversión en este paso",
+    "action1Title": "Acortar copy del paywall móvil",
+    "action1Impact": "+18–24% CVR",
+    "action2Title": "Agregar CTA sticky sobre el pricing",
+    "action2Impact": "+12% CTR",
+    "action3Title": "Dividir tráfico por ángulo creativo",
+    "action3Impact": "+8% ROAS",
+    "sessions": "2.840",
+    "completionRate": "28%",
+    "revenueAtRisk": "$4.320",
+    "sessionsTrend": "+12%",
+    "completionTrend": "-4%"
+  },
+  "funnelHealth": {
+    "title": "Salud del Embudo",
+    "sample": "Ejemplo",
+    "sampleScore": "72",
+    "noDataTitle": "Sin datos de rastreo aún",
+    "noDataDesc": "Instala el snippet del tracker para comenzar a medir la salud de tu embudo en tiempo real.",
+    "trackerCta": "Ver guía de instalación",
+    "scoreLabel": "Score de salud",
+    "criticalIssues": "Problemas críticos",
+    "activeSteps": "Pasos activos",
+    "sample3steps": "3 pasos mapeados",
+    "sample2issues": "2 problemas críticos"
+  },
+  "projectReadiness": {
+    "title": "Configuración del proyecto",
+    "step": {
+      "created": "Proyecto creado",
+      "steps": "Pasos del embudo configurados",
+      "snippet": "Snippet generado",
+      "tracker": "Tracker instalado"
+    },
+    "pending": "Pendiente — Tracking Engine",
+    "configure": "Configurar",
+    "noProjects": "Sin proyectos aún"
+  },
+  "metrics": {
+    "sessions": "Sesiones",
+    "completionRate": "Tasa de finalización",
+    "revenueAtRisk": "Ingresos en riesgo",
+    "trend7d": "vs últimos 7 días"
+  }
+}

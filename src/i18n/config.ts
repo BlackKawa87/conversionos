@@ -14,6 +14,9 @@ import esProjects  from './locales/es/projects.json'
 import enDiagnosis from './locales/en/diagnosis.json'
 import ptDiagnosis from './locales/pt/diagnosis.json'
 import esDiagnosis from './locales/es/diagnosis.json'
+import enDashboard from './locales/en/dashboard.json'
+import ptDashboard from './locales/pt/dashboard.json'
+import esDashboard from './locales/es/dashboard.json'
 
 i18n
   .use(LanguageDetector)
@@ -22,11 +25,11 @@ i18n
     fallbackLng: 'en',
     supportedLngs: ['en', 'pt', 'es'],
     defaultNS: 'common',
-    ns: ['common', 'shell', 'projects', 'diagnosis'],
+    ns: ['common', 'shell', 'projects', 'diagnosis', 'dashboard'],
     resources: {
-      en: { common: enCommon, shell: enShell, projects: enProjects, diagnosis: enDiagnosis },
-      pt: { common: ptCommon, shell: ptShell, projects: ptProjects, diagnosis: ptDiagnosis },
-      es: { common: esCommon, shell: esShell, projects: esProjects, diagnosis: esDiagnosis },
+      en: { common: enCommon, shell: enShell, projects: enProjects, diagnosis: enDiagnosis, dashboard: enDashboard },
+      pt: { common: ptCommon, shell: ptShell, projects: ptProjects, diagnosis: ptDiagnosis, dashboard: ptDashboard },
+      es: { common: esCommon, shell: esShell, projects: esProjects, diagnosis: esDiagnosis, dashboard: esDashboard },
     },
     interpolation: { escapeValue: false },
     detection: {

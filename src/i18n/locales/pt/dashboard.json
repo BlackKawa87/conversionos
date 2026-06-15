@@ -1,0 +1,69 @@
+{
+  "greeting": {
+    "morning": "Bom dia",
+    "afternoon": "Boa tarde",
+    "evening": "Boa noite"
+  },
+  "sections": {
+    "heroDiagnosis": "Maior Vazamento de Receita",
+    "actionPlan": "Plano de Ação",
+    "funnelHealth": "Saúde do Funil",
+    "projectReadiness": "Status do Projeto",
+    "supportingMetrics": "Métricas de Suporte",
+    "projects": "Projetos"
+  },
+  "demo": {
+    "badge": "Dados demo",
+    "heroBadge": "Diagnóstico de exemplo",
+    "metricsBadge": "Métricas de exemplo",
+    "metricsNotice": "Instale o tracker para ver números reais",
+    "context": "vs. 58% benchmark do setor para funis de quiz",
+    "insight": "A maioria dos usuários que completam o quiz não chega ao paywall. A lacuna entre a conclusão do quiz e o checkout é a sua maior oportunidade de conversão.",
+    "hypothesis": "Usuários mobile não conseguem ver o CTA sem rolar a página. O bloco de pricing tem 480px de altura no mobile, enterrando o botão de compra abaixo do fold.",
+    "action1": "Implementar CTA sticky no mobile",
+    "action2": "Reduzir a tabela de pricing para 3 benefícios principais",
+    "impact": "+18–24% de lift de conversão nesta etapa",
+    "action1Title": "Encurtar copy do paywall mobile",
+    "action1Impact": "+18–24% CVR",
+    "action2Title": "Adicionar CTA sticky acima do pricing",
+    "action2Impact": "+12% CTR",
+    "action3Title": "Dividir tráfego por ângulo criativo",
+    "action3Impact": "+8% ROAS",
+    "sessions": "2.840",
+    "completionRate": "28%",
+    "revenueAtRisk": "R$ 4.320",
+    "sessionsTrend": "+12%",
+    "completionTrend": "-4%"
+  },
+  "funnelHealth": {
+    "title": "Saúde do Funil",
+    "sample": "Exemplo",
+    "sampleScore": "72",
+    "noDataTitle": "Sem dados de rastreamento ainda",
+    "noDataDesc": "Instale o snippet do tracker para começar a medir a saúde do funil em tempo real.",
+    "trackerCta": "Ver guia de instalação",
+    "scoreLabel": "Score de saúde",
+    "criticalIssues": "Problemas críticos",
+    "activeSteps": "Etapas ativas",
+    "sample3steps": "3 etapas mapeadas",
+    "sample2issues": "2 problemas críticos"
+  },
+  "projectReadiness": {
+    "title": "Configuração do projeto",
+    "step": {
+      "created": "Projeto criado",
+      "steps": "Etapas do funil configuradas",
+      "snippet": "Snippet gerado",
+      "tracker": "Tracker instalado"
+    },
+    "pending": "Pendente — Tracking Engine",
+    "configure": "Configurar",
+    "noProjects": "Nenhum projeto ainda"
+  },
+  "metrics": {
+    "sessions": "Sessões",
+    "completionRate": "Taxa de conclusão",
+    "revenueAtRisk": "Receita em risco",
+    "trend7d": "vs últimos 7 dias"
+  }
+}

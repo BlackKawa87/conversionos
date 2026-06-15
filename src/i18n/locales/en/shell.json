@@ -6,7 +6,16 @@
     "dashboard": "Dashboard",
     "projects": "Projects",
     "alerts": "Alerts",
-    "settings": "Settings"
+    "settings": "Settings",
+    "groups": {
+      "intelligence": "Intelligence",
+      "tracking": "Tracking",
+      "system": "System"
+    },
+    "overview": "Overview",
+    "diagnoses": "Diagnoses",
+    "actionPlan": "Action Plan",
+    "experiments": "Experiments"
   },
   "topbar": {
     "profile": "Profile",

@@ -61,10 +61,16 @@ export default function App() {
               <AuthGuard>
                 <AppShell>
                   <Routes>
-                    <Route path="/"                          element={<DashboardPage />} />
-                    <Route path="/projects"                  element={<DashboardPage />} />
-                    <Route path="/projects/:projectId"       element={<ProjectDetailPage />} />
-                    <Route path="*"                          element={<Navigate to="/" replace />} />
+                    <Route path="/"                    element={<DashboardPage />} />
+                    <Route path="/projects"            element={<DashboardPage />} />
+                    <Route path="/projects/:projectId" element={<ProjectDetailPage />} />
+
+                    {/* Intelligence nav stubs — render dashboard until engines ship */}
+                    <Route path="/diagnoses"    element={<DashboardPage />} />
+                    <Route path="/action-plan"  element={<DashboardPage />} />
+                    <Route path="/experiments"  element={<DashboardPage />} />
+
+                    <Route path="*"             element={<Navigate to="/" replace />} />
                   </Routes>
                 </AppShell>
               </AuthGuard>

@@ -6,7 +6,16 @@
     "dashboard": "Painel",
     "projects": "Projetos",
     "alerts": "Alertas",
-    "settings": "Configurações"
+    "settings": "Configurações",
+    "groups": {
+      "intelligence": "Inteligência",
+      "tracking": "Rastreamento",
+      "system": "Sistema"
+    },
+    "overview": "Visão Geral",
+    "diagnoses": "Diagnósticos",
+    "actionPlan": "Plano de Ação",
+    "experiments": "Experimentos"
   },
   "topbar": {
     "profile": "Perfil",

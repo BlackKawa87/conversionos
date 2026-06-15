@@ -1,0 +1,30 @@
+{
+  "nav": {
+    "label": "Main navigation",
+    "close": "Close menu",
+    "menu": "Open menu",
+    "dashboard": "Dashboard",
+    "projects": "Projects",
+    "alerts": "Alerts",
+    "settings": "Settings"
+  },
+  "topbar": {
+    "profile": "Profile",
+    "logout": "Sign out"
+  },
+  "diagnosis": {
+    "dado": "DATA",
+    "dropoffLabel": "drop-off",
+    "insight": "INSIGHT",
+    "hipotese": "HYPOTHESIS",
+    "acao": "RECOMMENDED ACTION",
+    "agir": "Act"
+  },
+  "states": {
+    "emptyTitle": "Nothing here yet",
+    "emptyDesc": "Data will appear once you start tracking.",
+    "loading": "Loading…",
+    "errorTitle": "Something went wrong",
+    "retry": "Try again"
+  }
+}

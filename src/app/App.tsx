@@ -3,19 +3,19 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import type { Session } from '@supabase/supabase-js'
 import { supabase } from '@/providers/supabase'
+import { ToastProvider } from '@/design-system'
+import { AppShell } from '@/features/shell/AppShell'
 import LoginPage from '@/features/auth/components/LoginPage'
 import '@/i18n/config'
 
-const queryClient = new QueryClient({
-  defaultOptions: { queries: { staleTime: 60_000 } },
-})
+const queryClient = new QueryClient({ defaultOptions: { queries: { staleTime: 60_000 } } })
 
 function AuthGuard({ children }: { children: React.ReactNode }) {
   const [session, setSession] = useState<Session | null | undefined>(undefined)
 
   useEffect(() => {
     supabase.auth.getSession().then(({ data }) => setSession(data.session))
-    const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, s) => setSession(s))
+    const { data: { subscription } } = supabase.auth.onAuthStateChange((_e, s) => setSession(s))
     return () => subscription.unsubscribe()
   }, [])
 
@@ -26,11 +26,13 @@ function AuthGuard({ children }: { children: React.ReactNode }) {
 
 function DashboardPage() {
   return (
-    <div style={{ padding: '2rem', color: 'var(--text-primary)' }}>
-      <h1 style={{ fontFamily: 'var(--font-heading)', fontSize: '2rem', marginBottom: '0.5rem' }}>
-        ConversionOS
+    <div>
+      <h1 style={{ fontFamily: 'var(--font-heading)', fontSize: 'var(--text-3xl)', marginBottom: '0.5rem' }}>
+        Dashboard
       </h1>
-      <p style={{ color: 'var(--text-muted)' }}>Foundation Engine — scaffold ready.</p>
+      <p style={{ color: 'var(--color-text-muted)' }}>
+        ConversionOS — Design System Foundation ready.
+      </p>
     </div>
   )
 }
@@ -38,19 +40,25 @@ function DashboardPage() {
 export default function App() {
   return (
     <QueryClientProvider client={queryClient}>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/login" element={<LoginPage />} />
-          <Route
-            path="/*"
-            element={
-              <AuthGuard>
-                <DashboardPage />
-              </AuthGuard>
-            }
-          />
-        </Routes>
-      </BrowserRouter>
+      <ToastProvider>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/login" element={<LoginPage />} />
+            <Route
+              path="/*"
+              element={
+                <AuthGuard>
+                  <AppShell>
+                    <Routes>
+                      <Route path="/" element={<DashboardPage />} />
+                    </Routes>
+                  </AppShell>
+                </AuthGuard>
+              }
+            />
+          </Routes>
+        </BrowserRouter>
+      </ToastProvider>
     </QueryClientProvider>
   )
 }

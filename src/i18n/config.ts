@@ -5,6 +5,9 @@ import LanguageDetector from 'i18next-browser-languagedetector'
 import enCommon from './locales/en/common.json'
 import ptCommon from './locales/pt/common.json'
 import esCommon from './locales/es/common.json'
+import enShell  from './locales/en/shell.json'
+import ptShell  from './locales/pt/shell.json'
+import esShell  from './locales/es/shell.json'
 
 i18n
   .use(LanguageDetector)
@@ -13,10 +16,11 @@ i18n
     fallbackLng: 'en',
     supportedLngs: ['en', 'pt', 'es'],
     defaultNS: 'common',
+    ns: ['common', 'shell'],
     resources: {
-      en: { common: enCommon },
-      pt: { common: ptCommon },
-      es: { common: esCommon },
+      en: { common: enCommon, shell: enShell },
+      pt: { common: ptCommon, shell: ptShell },
+      es: { common: esCommon, shell: esShell },
     },
     interpolation: { escapeValue: false },
     detection: {

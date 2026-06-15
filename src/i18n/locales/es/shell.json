@@ -1,0 +1,30 @@
+{
+  "nav": {
+    "label": "Navegación principal",
+    "close": "Cerrar menú",
+    "menu": "Abrir menú",
+    "dashboard": "Panel",
+    "projects": "Proyectos",
+    "alerts": "Alertas",
+    "settings": "Configuración"
+  },
+  "topbar": {
+    "profile": "Perfil",
+    "logout": "Cerrar sesión"
+  },
+  "diagnosis": {
+    "dado": "DATO",
+    "dropoffLabel": "abandono",
+    "insight": "INSIGHT",
+    "hipotese": "HIPÓTESIS",
+    "acao": "ACCIÓN RECOMENDADA",
+    "agir": "Actuar"
+  },
+  "states": {
+    "emptyTitle": "Nada aquí todavía",
+    "emptyDesc": "Los datos aparecerán cuando comiences a rastrear.",
+    "loading": "Cargando…",
+    "errorTitle": "Algo salió mal",
+    "retry": "Intentar de nuevo"
+  }
+}

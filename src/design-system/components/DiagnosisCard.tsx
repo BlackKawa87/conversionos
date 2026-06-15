@@ -38,8 +38,8 @@ export function DiagnosisCard({ dropoffRate, potentialRevenue, insight, hypothes
     <article
       aria-label={`Diagnosis: ${insight}`}
       style={{
-        background: 'var(--color-bg-card)',
-        border: '1px solid var(--color-bg-border)',
+        background: 'var(--color-surface)',
+        border: '1px solid var(--color-border)',
         borderTop: `3px solid ${border}`,
         borderRadius: 'var(--radius-lg)',
         overflow: 'hidden',
@@ -112,7 +112,7 @@ export function DiagnosisCard({ dropoffRate, potentialRevenue, insight, hypothes
             aria-label={`Act on: ${action}`}
             style={{
               display: 'flex', alignItems: 'center', gap: '0.375rem',
-              background: 'var(--color-accent-dim)', border: '1px solid rgba(0,208,132,0.25)',
+              background: 'var(--color-accent-light)', border: '1px solid var(--color-accent-dim)',
               color: 'var(--color-accent)', borderRadius: 'var(--radius-md)',
               padding: '0.375rem 0.75rem', fontSize: 'var(--text-sm)', fontWeight: 500,
               cursor: 'pointer', whiteSpace: 'nowrap', flexShrink: 0,

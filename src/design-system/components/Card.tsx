@@ -8,9 +8,9 @@ export interface CardProps extends HTMLAttributes<HTMLDivElement> {
 }
 
 const VAR: Record<CardVariant, React.CSSProperties> = {
-  default:     { background: 'var(--color-bg-card)',     border: '1px solid var(--color-bg-border)' },
-  elevated:    { background: 'var(--color-bg-elevated)', border: '1px solid var(--color-bg-border)', boxShadow: 'var(--shadow-md)' },
-  interactive: { background: 'var(--color-bg-card)',     border: '1px solid var(--color-bg-border)', cursor: 'pointer', transition: 'border-color var(--transition-fast), box-shadow var(--transition-fast)' },
+  default:     { background: 'var(--color-surface)',     border: '1px solid var(--color-border)', boxShadow: 'var(--shadow-xs)' },
+  elevated:    { background: 'var(--color-surface)',     border: '1px solid var(--color-border)', boxShadow: 'var(--shadow-md)' },
+  interactive: { background: 'var(--color-surface)',     border: '1px solid var(--color-border)', cursor: 'pointer', transition: 'border-color var(--transition-fast), box-shadow var(--transition-fast)' },
 }
 
 export function Card({ variant = 'default', padding = '1.25rem', children, style, ...rest }: CardProps) {

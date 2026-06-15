@@ -8,11 +8,11 @@ export interface BadgeProps {
 }
 
 const VAR: Record<BadgeVariant, React.CSSProperties> = {
-  success: { background: 'rgba(34,197,94,0.12)',   color: 'var(--color-success)', border: '1px solid rgba(34,197,94,0.25)' },
-  warning: { background: 'rgba(245,158,11,0.12)',  color: 'var(--color-warning)', border: '1px solid rgba(245,158,11,0.25)' },
-  danger:  { background: 'rgba(239,68,68,0.12)',   color: 'var(--color-danger)',  border: '1px solid rgba(239,68,68,0.25)' },
-  neutral: { background: 'rgba(136,136,136,0.12)', color: 'var(--color-text-muted)', border: '1px solid rgba(136,136,136,0.2)' },
-  accent:  { background: 'var(--color-accent-dim)', color: 'var(--color-accent)',  border: '1px solid rgba(0,208,132,0.25)' },
+  success: { background: 'var(--color-success-dim)',  color: 'var(--color-success-text)', border: '1px solid var(--color-success)' },
+  warning: { background: 'var(--color-warning-dim)',  color: 'var(--color-warning-text)', border: '1px solid var(--color-warning)' },
+  danger:  { background: 'var(--color-danger-dim)',   color: 'var(--color-danger-text)',  border: '1px solid var(--color-danger)' },
+  neutral: { background: 'var(--color-bg-elevated)',  color: 'var(--color-text-muted)',   border: '1px solid var(--color-border)' },
+  accent:  { background: 'var(--color-accent-dim)',   color: 'var(--color-accent)',       border: '1px solid var(--color-accent)' },
 }
 
 export function Badge({ variant = 'neutral', children }: BadgeProps) {

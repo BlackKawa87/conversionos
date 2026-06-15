@@ -25,8 +25,8 @@ export function Sidebar({ open, onClose }: SidebarProps) {
     left: 0,
     bottom: 0,
     width: 'var(--sidebar-width)',
-    background: 'var(--color-bg-card)',
-    borderRight: '1px solid var(--color-bg-border)',
+    background: 'var(--color-surface)',
+    borderRight: '1px solid var(--color-border)',
     display: 'flex',
     flexDirection: 'column',
     zIndex: 100,
@@ -35,13 +35,12 @@ export function Sidebar({ open, onClose }: SidebarProps) {
 
   return (
     <>
-      {/* Mobile overlay */}
       {open && (
         <div
           aria-hidden
           onClick={onClose}
           style={{
-            position: 'fixed', inset: 0, background: 'rgba(0,0,0,0.6)',
+            position: 'fixed', inset: 0, background: 'var(--color-bg-overlay)',
             zIndex: 99, display: 'none',
           }}
           className="sidebar-overlay"
@@ -50,19 +49,17 @@ export function Sidebar({ open, onClose }: SidebarProps) {
 
       <nav
         aria-label={t('nav.label', 'Main navigation')}
-        style={{
-          ...sidebarStyle,
-        }}
+        style={sidebarStyle}
       >
         {/* Logo */}
         <div style={{
           height: 'var(--topbar-height)',
           display: 'flex', alignItems: 'center', justifyContent: 'space-between',
           padding: '0 1rem',
-          borderBottom: '1px solid var(--color-bg-border)',
+          borderBottom: '1px solid var(--color-border)',
           flexShrink: 0,
         }}>
-          <span style={{ fontFamily: 'var(--font-heading)', fontSize: 'var(--text-xl)', color: 'var(--color-accent)' }}>
+          <span style={{ fontFamily: 'var(--font-heading)', fontSize: 'var(--text-xl)', color: 'var(--color-brand)' }}>
             ConversionOS
           </span>
           <button
@@ -79,7 +76,7 @@ export function Sidebar({ open, onClose }: SidebarProps) {
         </div>
 
         {/* Nav links */}
-        <ul style={{ flex: 1, padding: '0.75rem 0.5rem', listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.25rem', overflowY: 'auto' }}>
+        <ul style={{ flex: 1, padding: '0.75rem 0.5rem', listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.125rem', overflowY: 'auto' }}>
           {NAV_ITEMS.map(item => (
             <li key={item.key}>
               <NavLink
@@ -91,11 +88,19 @@ export function Sidebar({ open, onClose }: SidebarProps) {
                   padding: '0.5rem 0.75rem',
                   borderRadius: 'var(--radius-md)',
                   fontSize: 'var(--text-sm)', fontWeight: 500,
-                  color: isActive ? 'var(--color-text-primary)' : 'var(--color-text-muted)',
-                  background: isActive ? 'var(--color-bg-elevated)' : 'transparent',
+                  color: isActive ? 'var(--color-accent)' : 'var(--color-text-secondary)',
+                  background: isActive ? 'var(--color-accent-light)' : 'transparent',
                   transition: 'background var(--transition-fast), color var(--transition-fast)',
                   textDecoration: 'none',
                 })}
+                onMouseEnter={e => {
+                  const a = e.currentTarget
+                  if (!a.classList.contains('active')) a.style.background = 'var(--color-bg-hover)'
+                }}
+                onMouseLeave={e => {
+                  const a = e.currentTarget
+                  if (!a.classList.contains('active')) a.style.background = 'transparent'
+                }}
               >
                 {item.icon}
                 {t(`nav.${item.key}`, item.key)}

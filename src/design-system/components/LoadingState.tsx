@@ -24,7 +24,7 @@ export function LoadingState({ label, size = 'md' }: LoadingStateProps) {
         aria-hidden
         style={{
           display: 'block', width: px, height: px,
-          border: `${size === 'sm' ? 2 : 3}px solid var(--color-bg-border)`,
+          border: `${size === 'sm' ? 2 : 3}px solid var(--color-border)`,
           borderTopColor: 'var(--color-accent)',
           borderRadius: '9999px',
           animation: 'spin 0.8s linear infinite',

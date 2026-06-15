@@ -12,10 +12,10 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 const VAR: Record<Variant, React.CSSProperties> = {
-  primary:   { background: 'var(--color-accent)',   color: '#000',                    border: 'none' },
-  secondary: { background: 'transparent',            color: 'var(--color-text-primary)', border: '1px solid var(--color-bg-border)' },
-  ghost:     { background: 'transparent',            color: 'var(--color-text-muted)',  border: 'none' },
-  danger:    { background: 'rgba(239,68,68,0.10)',   color: 'var(--color-danger)',      border: '1px solid var(--color-danger)' },
+  primary:   { background: 'var(--color-accent)',     color: '#FFFFFF',                   border: 'none' },
+  secondary: { background: 'transparent',              color: 'var(--color-text-primary)', border: '1px solid var(--color-border)' },
+  ghost:     { background: 'transparent',              color: 'var(--color-text-muted)',   border: 'none' },
+  danger:    { background: 'var(--color-danger-dim)',  color: 'var(--color-danger-text)',  border: '1px solid var(--color-danger)' },
 }
 
 const SZ: Record<Size, React.CSSProperties> = {

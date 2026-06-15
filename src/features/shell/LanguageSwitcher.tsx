@@ -23,7 +23,7 @@ export function LanguageSwitcher() {
         aria-label="Language"
         style={{
           background: 'transparent',
-          border: '1px solid var(--color-bg-border)',
+          border: '1px solid var(--color-border)',
           borderRadius: 'var(--radius-md)',
           color: 'var(--color-text-muted)',
           fontSize: 'var(--text-sm)',
@@ -37,7 +37,7 @@ export function LanguageSwitcher() {
         }}
       >
         {LANGS.map(l => (
-          <option key={l.code} value={l.code} style={{ background: 'var(--color-bg-elevated)' }}>
+          <option key={l.code} value={l.code} style={{ background: 'var(--color-surface-elevated)' }}>
             {l.flag} {l.label}
           </option>
         ))}

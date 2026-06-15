@@ -1,0 +1,111 @@
+{
+  "wizard": {
+    "title": "Project setup",
+    "next": "Continue",
+    "back": "Back",
+    "completed": "Setup complete! ConversionOS is now tracking your funnel.",
+    "step1": {
+      "title": "Basic info",
+      "subtitle": "Give your project a clear name that identifies the funnel.",
+      "nameLabel": "Project name",
+      "descLabel": "Description",
+      "descPlaceholder": "What does this funnel do?"
+    },
+    "step2": {
+      "title": "Type & platform",
+      "subtitle": "Select your funnel type and the platform it runs on.",
+      "funnelType": "Funnel type",
+      "platform": "Platform"
+    },
+    "step3": {
+      "title": "Configuration",
+      "subtitle": "Set the base URL and choose how ConversionOS will assist you.",
+      "baseUrl": "Base URL",
+      "baseUrlHint": "The root domain where your funnel lives.",
+      "supportMode": "Support mode"
+    },
+    "step4": {
+      "title": "Funnel steps",
+      "subtitle": "Map each key page of your funnel so ConversionOS can track drop-offs.",
+      "stepName": "Step name",
+      "stepType": "Step type",
+      "urlPattern": "URL pattern",
+      "urlPatternHint": "Path or pattern to match this step.",
+      "addStep": "Add step"
+    },
+    "step5": {
+      "title": "Summary & installation",
+      "subtitle": "Review your setup and paste the snippet into your site.",
+      "publicId": "Public tracking ID",
+      "trackerKey": "Tracker key",
+      "trackerKeyNote": "(server-side only — never expose client-side)",
+      "snippet": "Installation snippet",
+      "snippetHint": "Paste this before the closing </head> tag on every page of your funnel.",
+      "stepsConfigured": "funnel steps configured",
+      "finish": "Complete setup"
+    }
+  },
+  "detail": {
+    "projects": "Projects",
+    "editSetup": "Edit setup",
+    "archive": "Archive",
+    "archived": "Project archived",
+    "setupIncomplete": "Setup is not complete. Finish configuring this project to start tracking.",
+    "completeSetup": "Complete setup",
+    "funnelSteps": "Funnel steps",
+    "editSteps": "Edit",
+    "noSteps": "No steps configured yet.",
+    "installation": "Installation",
+    "publicId": "Public tracking ID",
+    "snippet": "Snippet",
+    "description": "Description"
+  },
+  "funnelType": {
+    "quiz": "Quiz",
+    "vsl": "VSL",
+    "leadgen": "Lead Gen",
+    "webinar": "Webinar",
+    "ecommerce": "Ecommerce",
+    "low_ticket": "Low Ticket",
+    "paywall": "Paywall",
+    "custom": "Custom"
+  },
+  "platform": {
+    "shopify": "Shopify",
+    "wordpress": "WordPress",
+    "webflow": "Webflow",
+    "framer": "Framer",
+    "gohighlevel": "GoHighLevel",
+    "clickfunnels": "ClickFunnels",
+    "react": "React",
+    "nextjs": "Next.js",
+    "lovable": "Lovable",
+    "custom": "Custom"
+  },
+  "supportMode": {
+    "diagnosis_only": "Diagnosis only",
+    "diagnosis_only_desc": "Track events and get automatic diagnosis reports. No suggestions.",
+    "assisted_optimization": "Assisted optimization",
+    "assisted_optimization_desc": "Diagnosis + AI-powered recommendations with estimated impact.",
+    "automated_actions_supported": "Automated actions",
+    "automated_actions_supported_desc": "Full pipeline: diagnosis, recommendations, and automated optimizations."
+  },
+  "stepType": {
+    "landing": "Landing",
+    "quiz_step": "Quiz step",
+    "processing": "Processing",
+    "results": "Results",
+    "paywall": "Paywall",
+    "checkout": "Checkout",
+    "upsell": "Upsell",
+    "thank_you": "Thank you",
+    "lead_capture": "Lead capture",
+    "custom": "Custom"
+  },
+  "common": {
+    "optional": "optional",
+    "cancel": "Cancel",
+    "hide": "Hide",
+    "reveal": "Reveal"
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "wizard": {
+    "title": "Configurar proyecto",
+    "next": "Continuar",
+    "back": "Atrás",
+    "completed": "¡Configuración completa! ConversionOS ya está rastreando tu embudo.",
+    "step1": {
+      "title": "Información básica",
+      "subtitle": "Dale un nombre claro al proyecto que identifique el embudo.",
+      "nameLabel": "Nombre del proyecto",
+      "descLabel": "Descripción",
+      "descPlaceholder": "¿Qué hace este embudo?"
+    },
+    "step2": {
+      "title": "Tipo y plataforma",
+      "subtitle": "Selecciona el tipo de embudo y la plataforma donde funciona.",
+      "funnelType": "Tipo de embudo",
+      "platform": "Plataforma"
+    },
+    "step3": {
+      "title": "Configuración",
+      "subtitle": "Define la URL base y cómo te asistirá ConversionOS.",
+      "baseUrl": "URL base",
+      "baseUrlHint": "El dominio raíz donde vive tu embudo.",
+      "supportMode": "Modo de soporte"
+    },
+    "step4": {
+      "title": "Pasos del embudo",
+      "subtitle": "Mapea cada página clave de tu embudo para rastrear abandonos.",
+      "stepName": "Nombre del paso",
+      "stepType": "Tipo de paso",
+      "urlPattern": "Patrón de URL",
+      "urlPatternHint": "Ruta o patrón para identificar este paso.",
+      "addStep": "Agregar paso"
+    },
+    "step5": {
+      "title": "Resumen e instalación",
+      "subtitle": "Revisa la configuración y pega el snippet en tu sitio.",
+      "publicId": "ID de seguimiento público",
+      "trackerKey": "Clave del tracker",
+      "trackerKeyNote": "(solo server-side — nunca exponer en el cliente)",
+      "snippet": "Snippet de instalación",
+      "snippetHint": "Pega esto antes de la etiqueta </head> en cada página del embudo.",
+      "stepsConfigured": "pasos del embudo configurados",
+      "finish": "Completar configuración"
+    }
+  },
+  "detail": {
+    "projects": "Proyectos",
+    "editSetup": "Editar configuración",
+    "archive": "Archivar",
+    "archived": "Proyecto archivado",
+    "setupIncomplete": "Configuración incompleta. Termina de configurar para empezar a rastrear.",
+    "completeSetup": "Completar configuración",
+    "funnelSteps": "Pasos del embudo",
+    "editSteps": "Editar",
+    "noSteps": "No hay pasos configurados aún.",
+    "installation": "Instalación",
+    "publicId": "ID de seguimiento público",
+    "snippet": "Snippet",
+    "description": "Descripción"
+  },
+  "funnelType": {
+    "quiz": "Quiz",
+    "vsl": "VSL",
+    "leadgen": "Captación de leads",
+    "webinar": "Webinar",
+    "ecommerce": "E-commerce",
+    "low_ticket": "Low Ticket",
+    "paywall": "Paywall",
+    "custom": "Personalizado"
+  },
+  "platform": {
+    "shopify": "Shopify",
+    "wordpress": "WordPress",
+    "webflow": "Webflow",
+    "framer": "Framer",
+    "gohighlevel": "GoHighLevel",
+    "clickfunnels": "ClickFunnels",
+    "react": "React",
+    "nextjs": "Next.js",
+    "lovable": "Lovable",
+    "custom": "Personalizado"
+  },
+  "supportMode": {
+    "diagnosis_only": "Solo diagnóstico",
+    "diagnosis_only_desc": "Rastrea eventos y genera informes automáticos. Sin sugerencias.",
+    "assisted_optimization": "Optimización asistida",
+    "assisted_optimization_desc": "Diagnóstico + recomendaciones IA con impacto estimado.",
+    "automated_actions_supported": "Acciones automatizadas",
+    "automated_actions_supported_desc": "Pipeline completo: diagnóstico, recomendaciones y optimizaciones."
+  },
+  "stepType": {
+    "landing": "Landing page",
+    "quiz_step": "Paso de quiz",
+    "processing": "Procesamiento",
+    "results": "Resultados",
+    "paywall": "Paywall",
+    "checkout": "Checkout",
+    "upsell": "Upsell",
+    "thank_you": "Gracias",
+    "lead_capture": "Captura de lead",
+    "custom": "Personalizado"
+  },
+  "common": {
+    "optional": "opcional",
+    "cancel": "Cancelar",
+    "hide": "Ocultar",
+    "reveal": "Revelar"
+  }
+}

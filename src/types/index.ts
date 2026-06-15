@@ -36,6 +36,10 @@ export interface OrganizationMember {
 }
 
 export type ProjectStatus = 'setup' | 'active' | 'paused' | 'archived'
+export type FunnelType    = 'quiz' | 'vsl' | 'leadgen' | 'webinar' | 'ecommerce' | 'low_ticket' | 'paywall' | 'custom'
+export type Platform      = 'shopify' | 'wordpress' | 'webflow' | 'framer' | 'gohighlevel' | 'clickfunnels' | 'react' | 'nextjs' | 'lovable' | 'custom'
+export type SupportMode   = 'diagnosis_only' | 'assisted_optimization' | 'automated_actions_supported'
+export type StepType      = 'landing' | 'quiz_step' | 'processing' | 'results' | 'paywall' | 'checkout' | 'upsell' | 'thank_you' | 'lead_capture' | 'custom'
 
 export interface Project {
   id: string
@@ -44,10 +48,28 @@ export interface Project {
   description: string | null
   domain: string | null
   tracker_key: string
+  public_tracking_id: string
   status: ProjectStatus
+  funnel_type: FunnelType | null
+  platform: Platform | null
+  support_mode: SupportMode | null
+  base_url: string | null
+  is_active: boolean
+  setup_completed: boolean
   created_by: string
   created_at: string
   updated_at: string
+}
+
+export interface ProjectStep {
+  id: string
+  project_id: string
+  step_name: string
+  step_type: StepType
+  step_index: number
+  url_pattern: string | null
+  is_active: boolean
+  created_at: string
 }
 
 export type InvitationRole = 'admin' | 'analyst' | 'viewer'
@@ -92,6 +114,7 @@ export type LoggerEvent =
   | 'project.updated'
   | 'project.deleted'
   | 'project.status_changed'
+  | 'project.setup_completed'
   | 'invitation.sent'
   | 'invitation.accepted'
   | 'invitation.revoked'

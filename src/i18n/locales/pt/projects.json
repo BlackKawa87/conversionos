@@ -1,0 +1,111 @@
+{
+  "wizard": {
+    "title": "Configurar projeto",
+    "next": "Continuar",
+    "back": "Voltar",
+    "completed": "Configuração concluída! O ConversionOS está rastreando seu funil.",
+    "step1": {
+      "title": "Informações básicas",
+      "subtitle": "Dê um nome claro ao seu projeto que identifique o funil.",
+      "nameLabel": "Nome do projeto",
+      "descLabel": "Descrição",
+      "descPlaceholder": "O que este funil faz?"
+    },
+    "step2": {
+      "title": "Tipo e plataforma",
+      "subtitle": "Selecione o tipo de funil e a plataforma onde ele funciona.",
+      "funnelType": "Tipo de funil",
+      "platform": "Plataforma"
+    },
+    "step3": {
+      "title": "Configuração",
+      "subtitle": "Defina a URL base e escolha como o ConversionOS irá te assistir.",
+      "baseUrl": "URL base",
+      "baseUrlHint": "O domínio raiz onde seu funil está hospedado.",
+      "supportMode": "Modo de suporte"
+    },
+    "step4": {
+      "title": "Etapas do funil",
+      "subtitle": "Mapeie cada página do seu funil para que o ConversionOS rastreie abandonos.",
+      "stepName": "Nome da etapa",
+      "stepType": "Tipo de etapa",
+      "urlPattern": "Padrão de URL",
+      "urlPatternHint": "Caminho ou padrão para identificar esta etapa.",
+      "addStep": "Adicionar etapa"
+    },
+    "step5": {
+      "title": "Resumo e instalação",
+      "subtitle": "Revise a configuração e cole o snippet no seu site.",
+      "publicId": "ID de rastreamento público",
+      "trackerKey": "Chave do tracker",
+      "trackerKeyNote": "(apenas server-side — nunca expor no client)",
+      "snippet": "Snippet de instalação",
+      "snippetHint": "Cole isso antes da tag </head> em todas as páginas do seu funil.",
+      "stepsConfigured": "etapas do funil configuradas",
+      "finish": "Concluir configuração"
+    }
+  },
+  "detail": {
+    "projects": "Projetos",
+    "editSetup": "Editar configuração",
+    "archive": "Arquivar",
+    "archived": "Projeto arquivado",
+    "setupIncomplete": "Configuração incompleta. Conclua a configuração para começar a rastrear.",
+    "completeSetup": "Concluir configuração",
+    "funnelSteps": "Etapas do funil",
+    "editSteps": "Editar",
+    "noSteps": "Nenhuma etapa configurada.",
+    "installation": "Instalação",
+    "publicId": "ID de rastreamento público",
+    "snippet": "Snippet",
+    "description": "Descrição"
+  },
+  "funnelType": {
+    "quiz": "Quiz",
+    "vsl": "VSL",
+    "leadgen": "Captação de leads",
+    "webinar": "Webinar",
+    "ecommerce": "E-commerce",
+    "low_ticket": "Low Ticket",
+    "paywall": "Paywall",
+    "custom": "Personalizado"
+  },
+  "platform": {
+    "shopify": "Shopify",
+    "wordpress": "WordPress",
+    "webflow": "Webflow",
+    "framer": "Framer",
+    "gohighlevel": "GoHighLevel",
+    "clickfunnels": "ClickFunnels",
+    "react": "React",
+    "nextjs": "Next.js",
+    "lovable": "Lovable",
+    "custom": "Personalizado"
+  },
+  "supportMode": {
+    "diagnosis_only": "Apenas diagnóstico",
+    "diagnosis_only_desc": "Rastreia eventos e gera relatórios automáticos. Sem sugestões.",
+    "assisted_optimization": "Otimização assistida",
+    "assisted_optimization_desc": "Diagnóstico + recomendações por IA com impacto estimado.",
+    "automated_actions_supported": "Ações automatizadas",
+    "automated_actions_supported_desc": "Pipeline completo: diagnóstico, recomendações e otimizações automáticas."
+  },
+  "stepType": {
+    "landing": "Landing page",
+    "quiz_step": "Etapa do quiz",
+    "processing": "Processamento",
+    "results": "Resultados",
+    "paywall": "Paywall",
+    "checkout": "Checkout",
+    "upsell": "Upsell",
+    "thank_you": "Obrigado",
+    "lead_capture": "Captura de lead",
+    "custom": "Personalizado"
+  },
+  "common": {
+    "optional": "opcional",
+    "cancel": "Cancelar",
+    "hide": "Ocultar",
+    "reveal": "Revelar"
+  }
+}

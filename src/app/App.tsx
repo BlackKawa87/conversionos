@@ -4,11 +4,13 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { ToastProvider, LoadingState } from '@/design-system'
 import { AppShell } from '@/features/shell/AppShell'
 import { useAuth } from '@/features/auth/hooks/useAuth'
-import LoginPage      from '@/features/auth/components/LoginPage'
-import AuthCallback   from '@/features/auth/components/AuthCallback'
-import OnboardingPage from '@/features/auth/components/OnboardingPage'
+import LoginPage        from '@/features/auth/components/LoginPage'
+import AuthCallback     from '@/features/auth/components/AuthCallback'
+import OnboardingPage   from '@/features/auth/components/OnboardingPage'
 import AcceptInvitePage from '@/features/invitations/components/AcceptInvitePage'
-import DashboardPage  from '@/pages/DashboardPage'
+import DashboardPage    from '@/pages/DashboardPage'
+import ProjectDetailPage from '@/pages/ProjectDetailPage'
+import ProjectWizardPage from '@/pages/ProjectWizardPage'
 import '@/i18n/config'
 
 const queryClient = new QueryClient({
@@ -27,7 +29,7 @@ function AuthGuard({ children }: { children: React.ReactNode }) {
     }
   }, [loading, isAuthenticated, location, navigate])
 
-  if (loading)         return <LoadingState size="lg" />
+  if (loading)          return <LoadingState size="lg" />
   if (!isAuthenticated) return null
   return <>{children}</>
 }
@@ -39,23 +41,30 @@ export default function App() {
         <BrowserRouter>
           <Routes>
             {/* Public */}
-            <Route path="/login"          element={<LoginPage />} />
-            <Route path="/auth/callback"  element={<AuthCallback />} />
+            <Route path="/login"         element={<LoginPage />} />
+            <Route path="/auth/callback" element={<AuthCallback />} />
 
-            {/* Semi-public: needs login to accept */}
-            <Route path="/accept-invite"  element={<AuthGuard><AcceptInvitePage /></AuthGuard>} />
+            {/* Semi-public */}
+            <Route path="/accept-invite" element={<AuthGuard><AcceptInvitePage /></AuthGuard>} />
 
             {/* Protected — no shell */}
-            <Route path="/onboarding"     element={<AuthGuard><OnboardingPage /></AuthGuard>} />
+            <Route path="/onboarding" element={<AuthGuard><OnboardingPage /></AuthGuard>} />
+
+            {/* Project wizard — no AppShell (full-screen flow) */}
+            <Route
+              path="/projects/:projectId/setup"
+              element={<AuthGuard><ProjectWizardPage /></AuthGuard>}
+            />
 
             {/* Protected — with AppShell */}
             <Route path="/*" element={
               <AuthGuard>
                 <AppShell>
                   <Routes>
-                    <Route path="/"        element={<DashboardPage />} />
-                    <Route path="/projects" element={<DashboardPage />} />
-                    <Route path="*"         element={<Navigate to="/" replace />} />
+                    <Route path="/"                          element={<DashboardPage />} />
+                    <Route path="/projects"                  element={<DashboardPage />} />
+                    <Route path="/projects/:projectId"       element={<ProjectDetailPage />} />
+                    <Route path="*"                          element={<Navigate to="/" replace />} />
                   </Routes>
                 </AppShell>
               </AuthGuard>

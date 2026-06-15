@@ -1,40 +1,35 @@
-import { useEffect, useState } from 'react'
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
+import { useEffect } from 'react'
+import { BrowserRouter, Routes, Route, Navigate, useLocation, useNavigate } from 'react-router-dom'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
-import type { Session } from '@supabase/supabase-js'
-import { supabase } from '@/providers/supabase'
-import { ToastProvider } from '@/design-system'
+import { ToastProvider, LoadingState } from '@/design-system'
 import { AppShell } from '@/features/shell/AppShell'
-import LoginPage from '@/features/auth/components/LoginPage'
+import { useAuth } from '@/features/auth/hooks/useAuth'
+import LoginPage      from '@/features/auth/components/LoginPage'
+import AuthCallback   from '@/features/auth/components/AuthCallback'
+import OnboardingPage from '@/features/auth/components/OnboardingPage'
+import AcceptInvitePage from '@/features/invitations/components/AcceptInvitePage'
+import DashboardPage  from '@/pages/DashboardPage'
 import '@/i18n/config'
 
-const queryClient = new QueryClient({ defaultOptions: { queries: { staleTime: 60_000 } } })
+const queryClient = new QueryClient({
+  defaultOptions: { queries: { staleTime: 30_000, retry: 1 } },
+})
 
 function AuthGuard({ children }: { children: React.ReactNode }) {
-  const [session, setSession] = useState<Session | null | undefined>(undefined)
+  const { isAuthenticated, loading } = useAuth()
+  const location = useLocation()
+  const navigate  = useNavigate()
 
   useEffect(() => {
-    supabase.auth.getSession().then(({ data }) => setSession(data.session))
-    const { data: { subscription } } = supabase.auth.onAuthStateChange((_e, s) => setSession(s))
-    return () => subscription.unsubscribe()
-  }, [])
+    if (!loading && !isAuthenticated) {
+      sessionStorage.setItem('auth_redirect', location.pathname + location.search)
+      navigate('/login', { replace: true })
+    }
+  }, [loading, isAuthenticated, location, navigate])
 
-  if (session === undefined) return null
-  if (!session) return <Navigate to="/login" replace />
+  if (loading)         return <LoadingState size="lg" />
+  if (!isAuthenticated) return null
   return <>{children}</>
-}
-
-function DashboardPage() {
-  return (
-    <div>
-      <h1 style={{ fontFamily: 'var(--font-heading)', fontSize: 'var(--text-3xl)', marginBottom: '0.5rem' }}>
-        Dashboard
-      </h1>
-      <p style={{ color: 'var(--color-text-muted)' }}>
-        ConversionOS — Design System Foundation ready.
-      </p>
-    </div>
-  )
 }
 
 export default function App() {
@@ -43,19 +38,28 @@ export default function App() {
       <ToastProvider>
         <BrowserRouter>
           <Routes>
-            <Route path="/login" element={<LoginPage />} />
-            <Route
-              path="/*"
-              element={
-                <AuthGuard>
-                  <AppShell>
-                    <Routes>
-                      <Route path="/" element={<DashboardPage />} />
-                    </Routes>
-                  </AppShell>
-                </AuthGuard>
-              }
-            />
+            {/* Public */}
+            <Route path="/login"          element={<LoginPage />} />
+            <Route path="/auth/callback"  element={<AuthCallback />} />
+
+            {/* Semi-public: needs login to accept */}
+            <Route path="/accept-invite"  element={<AuthGuard><AcceptInvitePage /></AuthGuard>} />
+
+            {/* Protected — no shell */}
+            <Route path="/onboarding"     element={<AuthGuard><OnboardingPage /></AuthGuard>} />
+
+            {/* Protected — with AppShell */}
+            <Route path="/*" element={
+              <AuthGuard>
+                <AppShell>
+                  <Routes>
+                    <Route path="/"        element={<DashboardPage />} />
+                    <Route path="/projects" element={<DashboardPage />} />
+                    <Route path="*"         element={<Navigate to="/" replace />} />
+                  </Routes>
+                </AppShell>
+              </AuthGuard>
+            } />
           </Routes>
         </BrowserRouter>
       </ToastProvider>

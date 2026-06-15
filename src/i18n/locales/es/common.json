@@ -1,31 +1,64 @@
 {
-  "app": {
-    "name": "ConversionOS",
-    "tagline": "Plataforma de Inteligencia de Conversión"
-  },
+  "app":  { "name": "ConversionOS", "tagline": "Plataforma de Inteligencia de Conversión" },
   "auth": {
-    "signIn": "Iniciar sesión",
-    "signOut": "Cerrar sesión",
-    "signUp": "Crear cuenta",
-    "email": "Correo electrónico",
-    "password": "Contraseña",
+    "signIn": "Iniciar sesión", "signOut": "Cerrar sesión", "signUp": "Crear cuenta",
+    "email": "Correo electrónico", "password": "Contraseña",
     "forgotPassword": "Olvidé mi contraseña",
     "magicLink": "Enviar enlace mágico",
     "magicLinkSent": "Revisa tu correo para el enlace de acceso.",
     "loading": "Cargando…"
   },
-  "nav": {
-    "dashboard": "Panel",
-    "projects": "Proyectos",
-    "settings": "Configuración"
-  },
+  "nav":  { "dashboard": "Panel", "projects": "Proyectos", "settings": "Configuración" },
   "common": {
-    "save": "Guardar",
-    "cancel": "Cancelar",
-    "delete": "Eliminar",
-    "edit": "Editar",
-    "loading": "Cargando…",
-    "error": "Algo salió mal.",
-    "success": "¡Listo!"
+    "save": "Guardar", "cancel": "Cancelar", "delete": "Eliminar", "edit": "Editar",
+    "loading": "Cargando…", "error": "Algo salió mal.", "success": "¡Listo!",
+    "copy": "Copiar", "copied": "¡Copiado!", "done": "Listo", "home": "Ir al inicio"
+  },
+  "onboarding": {
+    "title": "Crea tu organización",
+    "subtitle": "Serás el propietario y podrás invitar miembros después.",
+    "orgName": "Nombre de la organización",
+    "slug": "Slug de URL",
+    "slugHint": "Minúsculas y guiones. No se puede cambiar.",
+    "cta": "Crear organización",
+    "success": "¡Organización creada!"
+  },
+  "project": {
+    "createTitle": "Nuevo proyecto",
+    "createDesc":  "Los proyectos representan embudos o productos que deseas optimizar.",
+    "name":        "Nombre del proyecto",
+    "description": "Descripción",
+    "descPlaceholder": "¿Qué está optimizando este proyecto?",
+    "domain":      "Dominio (opcional)",
+    "create":      "Crear proyecto",
+    "created":     "¡Proyecto creado!",
+    "archived":    "Proyecto archivado",
+    "new":         "Nuevo proyecto",
+    "emptyTitle":  "Aún no hay proyectos",
+    "emptyDesc":   "Crea tu primer proyecto para rastrear conversiones."
+  },
+  "invite": {
+    "title":       "Invitar miembro",
+    "desc":        "Recibirán un enlace para unirse a tu organización.",
+    "email":       "Correo electrónico",
+    "role":        "Rol",
+    "send":        "Crear invitación",
+    "created":     "¡Invitación creada!",
+    "linkReady":   "Comparte este enlace con",
+    "accepting":   "Aceptando invitación…",
+    "accepted":    "¡Invitación aceptada!",
+    "successTitle": "¡Estás dentro!",
+    "successDesc": "Tu membresía está activa.",
+    "goDashboard": "Ir al panel",
+    "errorTitle":  "Error de invitación",
+    "errorDesc":   "Esta invitación puede haber expirado o ya fue usada."
+  },
+  "members": {
+    "title":      "Miembros",
+    "invite":     "Invitar",
+    "emptyTitle": "Aún no hay miembros"
+  },
+  "dashboard": {
+    "hint": "Más analíticas llegando en Engine 02."
   }
 }

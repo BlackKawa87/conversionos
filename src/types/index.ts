@@ -32,6 +32,7 @@ export interface OrganizationMember {
   role: MemberRole
   invited_by: string | null
   joined_at: string
+  user_profiles?: Pick<UserProfile, 'id' | 'email' | 'full_name' | 'avatar_url'> | null
 }
 
 export type ProjectStatus = 'setup' | 'active' | 'paused' | 'archived'
@@ -40,6 +41,7 @@ export interface Project {
   id: string
   organization_id: string
   name: string
+  description: string | null
   domain: string | null
   tracker_key: string
   status: ProjectStatus

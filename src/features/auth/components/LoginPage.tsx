@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Navigate } from 'react-router-dom'
+import { Navigate, useNavigate } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { CheckCircle2 } from 'lucide-react'
 import { Button, Input, Badge } from '@/design-system'
@@ -152,6 +152,7 @@ function OrDivider({ label }: { label: string }) {
 
 export default function LoginPage() {
   const { t } = useTranslation()
+  const navigate  = useNavigate()
 
   const [email,     setEmail]     = useState('')
   const [password,  setPassword]  = useState('')
@@ -176,8 +177,13 @@ export default function LoginPage() {
     if (error) {
       setAuthError(mapAuthError(error.message))
       setLoading(false)
+    } else {
+      // LoginPage is a public route — AuthGuard is not mounted here.
+      // Navigate explicitly so AuthGuard mounts and reads the new session.
+      const redirect = sessionStorage.getItem('auth_redirect') || '/'
+      sessionStorage.removeItem('auth_redirect')
+      navigate(redirect, { replace: true })
     }
-    // Success: onAuthStateChange in useAuth → isAuthenticated → AuthGuard clears
   }
 
   const handleMagicLink = async (e: React.FormEvent) => {

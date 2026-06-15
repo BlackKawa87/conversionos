@@ -1,0 +1,91 @@
+{
+  "chain": {
+    "data": "DATA",
+    "context": "CONTEXT",
+    "insight": "INSIGHT",
+    "hypothesis": "HYPOTHESIS",
+    "action": "RECOMMENDED ACTION",
+    "impact": "ESTIMATED IMPACT"
+  },
+  "severity": {
+    "critical": "CRITICAL",
+    "warning": "WARNING",
+    "info": "INFO"
+  },
+  "confidence": {
+    "label": "Confidence",
+    "high": "High confidence",
+    "medium": "Medium confidence",
+    "low": "Low confidence"
+  },
+  "impact": {
+    "high": "High impact",
+    "medium": "Medium impact",
+    "low": "Low impact",
+    "unknown": "Impact unknown"
+  },
+  "effort": {
+    "low": "Low effort",
+    "medium": "Medium effort",
+    "high": "High effort"
+  },
+  "actions": {
+    "dismiss": "Dismiss",
+    "investigate": "Investigate",
+    "createAction": "Create action",
+    "view": "View",
+    "act": "Act"
+  },
+  "hero": {
+    "headline": "Your biggest revenue leak this week"
+  },
+  "labels": {
+    "dropoff": "drop-off",
+    "sessions": "sessions analyzed",
+    "revenueLoss": "estimated monthly revenue loss",
+    "revenuePotential": "potential monthly recovery",
+    "liftEstimate": "Estimated lift"
+  },
+  "revenueNumber": {
+    "loss": "revenue lost",
+    "gain": "potential recovery",
+    "neutral": "tracked revenue"
+  },
+  "emptyStates": {
+    "noProjects": {
+      "title": "No projects yet",
+      "desc": "Create your first project to start diagnosing your funnel's conversion rate.",
+      "action": "Create project"
+    },
+    "noTracker": {
+      "title": "Tracker not installed",
+      "desc": "Paste the ConversionOS snippet on your site. Data will appear within minutes of your first visitor.",
+      "action": "View installation guide"
+    },
+    "noEvents": {
+      "title": "Waiting for first events",
+      "desc": "Your tracker is active. Data will appear within minutes once visitors start arriving.",
+      "action": "Verify installation"
+    },
+    "noDiagnosis": {
+      "title": "No active diagnoses",
+      "desc": "ConversionOS will analyze your funnel automatically once enough traffic is collected.",
+      "action": "View requirements"
+    },
+    "noRecommendations": {
+      "title": "No recommendations yet",
+      "desc": "Recommendations are generated from active diagnoses. Add more funnel steps to unlock them.",
+      "action": "Add funnel steps"
+    }
+  },
+  "actionPreview": {
+    "priority": "Priority",
+    "expectedImpact": "Expected impact",
+    "effort": "Effort",
+    "status": {
+      "pending": "Pending",
+      "in_progress": "In progress",
+      "done": "Done"
+    }
+  }
+}

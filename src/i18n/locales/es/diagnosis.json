@@ -1,0 +1,91 @@
+{
+  "chain": {
+    "data": "DATO",
+    "context": "CONTEXTO",
+    "insight": "INSIGHT",
+    "hypothesis": "HIPÓTESIS",
+    "action": "ACCIÓN RECOMENDADA",
+    "impact": "IMPACTO ESTIMADO"
+  },
+  "severity": {
+    "critical": "CRÍTICO",
+    "warning": "ATENCIÓN",
+    "info": "INFO"
+  },
+  "confidence": {
+    "label": "Confianza",
+    "high": "Alta confianza",
+    "medium": "Confianza media",
+    "low": "Baja confianza"
+  },
+  "impact": {
+    "high": "Alto impacto",
+    "medium": "Impacto medio",
+    "low": "Bajo impacto",
+    "unknown": "Impacto desconocido"
+  },
+  "effort": {
+    "low": "Bajo esfuerzo",
+    "medium": "Esfuerzo medio",
+    "high": "Alto esfuerzo"
+  },
+  "actions": {
+    "dismiss": "Descartar",
+    "investigate": "Investigar",
+    "createAction": "Crear acción",
+    "view": "Ver",
+    "act": "Actuar"
+  },
+  "hero": {
+    "headline": "Tu mayor fuga de ingresos esta semana"
+  },
+  "labels": {
+    "dropoff": "abandono",
+    "sessions": "sesiones analizadas",
+    "revenueLoss": "pérdida de ingresos estimada/mes",
+    "revenuePotential": "recuperación potencial/mes",
+    "liftEstimate": "Lift estimado"
+  },
+  "revenueNumber": {
+    "loss": "ingresos perdidos",
+    "gain": "recuperación potencial",
+    "neutral": "ingresos rastreados"
+  },
+  "emptyStates": {
+    "noProjects": {
+      "title": "Sin proyectos aún",
+      "desc": "Crea tu primer proyecto para empezar a diagnosticar la conversión de tu embudo.",
+      "action": "Crear proyecto"
+    },
+    "noTracker": {
+      "title": "Tracker no instalado",
+      "desc": "Pega el snippet de ConversionOS en tu sitio. Los datos aparecerán en minutos.",
+      "action": "Ver guía de instalación"
+    },
+    "noEvents": {
+      "title": "Esperando primeros eventos",
+      "desc": "Tu tracker está activo. Los datos aparecerán en cuanto lleguen los primeros visitantes.",
+      "action": "Verificar instalación"
+    },
+    "noDiagnosis": {
+      "title": "Sin diagnósticos activos",
+      "desc": "ConversionOS analizará tu embudo automáticamente cuando haya suficiente tráfico.",
+      "action": "Ver requisitos"
+    },
+    "noRecommendations": {
+      "title": "Sin recomendaciones aún",
+      "desc": "Las recomendaciones se generan desde diagnósticos activos. Agrega pasos al embudo para desbloquearlas.",
+      "action": "Agregar pasos"
+    }
+  },
+  "actionPreview": {
+    "priority": "Prioridad",
+    "expectedImpact": "Impacto esperado",
+    "effort": "Esfuerzo",
+    "status": {
+      "pending": "Pendiente",
+      "in_progress": "En curso",
+      "done": "Hecho"
+    }
+  }
+}

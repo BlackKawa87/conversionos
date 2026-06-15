@@ -10,7 +10,9 @@
   },
   "topbar": {
     "profile": "Profile",
-    "logout": "Sign out"
+    "logout": "Sign out",
+    "lightMode": "Light mode",
+    "darkMode": "Dark mode"
   },
   "diagnosis": {
     "dado": "DATA",

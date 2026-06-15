@@ -10,7 +10,9 @@
   },
   "topbar": {
     "profile": "Perfil",
-    "logout": "Sair"
+    "logout": "Sair",
+    "lightMode": "Modo claro",
+    "darkMode": "Modo escuro"
   },
   "diagnosis": {
     "dado": "DADO",

@@ -1,0 +1,91 @@
+{
+  "chain": {
+    "data": "DADO",
+    "context": "CONTEXTO",
+    "insight": "INSIGHT",
+    "hypothesis": "HIPÓTESE",
+    "action": "AÇÃO RECOMENDADA",
+    "impact": "IMPACTO ESTIMADO"
+  },
+  "severity": {
+    "critical": "CRÍTICO",
+    "warning": "ATENÇÃO",
+    "info": "INFO"
+  },
+  "confidence": {
+    "label": "Confiança",
+    "high": "Alta confiança",
+    "medium": "Confiança média",
+    "low": "Baixa confiança"
+  },
+  "impact": {
+    "high": "Alto impacto",
+    "medium": "Impacto médio",
+    "low": "Baixo impacto",
+    "unknown": "Impacto desconhecido"
+  },
+  "effort": {
+    "low": "Baixo esforço",
+    "medium": "Esforço médio",
+    "high": "Alto esforço"
+  },
+  "actions": {
+    "dismiss": "Dispensar",
+    "investigate": "Investigar",
+    "createAction": "Criar ação",
+    "view": "Ver",
+    "act": "Agir"
+  },
+  "hero": {
+    "headline": "Seu maior vazamento de receita esta semana"
+  },
+  "labels": {
+    "dropoff": "abandono",
+    "sessions": "sessões analisadas",
+    "revenueLoss": "perda de receita estimada/mês",
+    "revenuePotential": "recuperação potencial/mês",
+    "liftEstimate": "Lift estimado"
+  },
+  "revenueNumber": {
+    "loss": "receita perdida",
+    "gain": "recuperação potencial",
+    "neutral": "receita rastreada"
+  },
+  "emptyStates": {
+    "noProjects": {
+      "title": "Nenhum projeto ainda",
+      "desc": "Crie seu primeiro projeto para começar a diagnosticar a conversão do seu funil.",
+      "action": "Criar projeto"
+    },
+    "noTracker": {
+      "title": "Tracker não instalado",
+      "desc": "Cole o snippet do ConversionOS no seu site. Os dados aparecerão em minutos.",
+      "action": "Ver guia de instalação"
+    },
+    "noEvents": {
+      "title": "Aguardando primeiros eventos",
+      "desc": "Seu tracker está ativo. Os dados aparecerão quando os primeiros visitantes chegarem.",
+      "action": "Verificar instalação"
+    },
+    "noDiagnosis": {
+      "title": "Nenhum diagnóstico ativo",
+      "desc": "O ConversionOS analisará seu funil automaticamente quando houver tráfego suficiente.",
+      "action": "Ver requisitos"
+    },
+    "noRecommendations": {
+      "title": "Nenhuma recomendação ainda",
+      "desc": "Recomendações são geradas a partir de diagnósticos ativos. Adicione etapas ao funil para desbloqueá-las.",
+      "action": "Adicionar etapas"
+    }
+  },
+  "actionPreview": {
+    "priority": "Prioridade",
+    "expectedImpact": "Impacto esperado",
+    "effort": "Esforço",
+    "status": {
+      "pending": "Pendente",
+      "in_progress": "Em andamento",
+      "done": "Concluído"
+    }
+  }
+}

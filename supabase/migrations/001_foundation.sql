@@ -162,77 +162,94 @@ ALTER TABLE invitations          ENABLE ROW LEVEL SECURITY;
 ALTER TABLE audit_logs           ENABLE ROW LEVEL SECURITY;
 
 -- user_profiles
+DROP POLICY IF EXISTS "users can read own profile" ON user_profiles;
 CREATE POLICY "users can read own profile"
   ON user_profiles FOR SELECT
   USING (id = auth.uid());
 
+DROP POLICY IF EXISTS "users can update own profile" ON user_profiles;
 CREATE POLICY "users can update own profile"
   ON user_profiles FOR UPDATE
   USING (id = auth.uid())
   WITH CHECK (id = auth.uid());
 
 -- organizations
+DROP POLICY IF EXISTS "org members can read org" ON organizations;
 CREATE POLICY "org members can read org"
   ON organizations FOR SELECT
   USING (id = ANY(public.user_org_ids()));
 
+DROP POLICY IF EXISTS "org admins can update org" ON organizations;
 CREATE POLICY "org admins can update org"
   ON organizations FOR UPDATE
   USING (public.is_org_admin(id))
   WITH CHECK (public.is_org_admin(id));
 
 -- organization_members
+DROP POLICY IF EXISTS "members can read org members" ON organization_members;
 CREATE POLICY "members can read org members"
   ON organization_members FOR SELECT
   USING (organization_id = ANY(public.user_org_ids()));
 
+DROP POLICY IF EXISTS "admins can insert members" ON organization_members;
 CREATE POLICY "admins can insert members"
   ON organization_members FOR INSERT
   WITH CHECK (public.is_org_admin(organization_id));
 
+DROP POLICY IF EXISTS "admins can update member roles" ON organization_members;
 CREATE POLICY "admins can update member roles"
   ON organization_members FOR UPDATE
   USING (public.is_org_admin(organization_id));
 
+DROP POLICY IF EXISTS "admins can remove members" ON organization_members;
 CREATE POLICY "admins can remove members"
   ON organization_members FOR DELETE
   USING (public.is_org_admin(organization_id));
 
 -- projects
+DROP POLICY IF EXISTS "members can read projects" ON projects;
 CREATE POLICY "members can read projects"
   ON projects FOR SELECT
   USING (organization_id = ANY(public.user_org_ids()));
 
+DROP POLICY IF EXISTS "admins can create projects" ON projects;
 CREATE POLICY "admins can create projects"
   ON projects FOR INSERT
   WITH CHECK (public.is_org_admin(organization_id));
 
+DROP POLICY IF EXISTS "admins can update projects" ON projects;
 CREATE POLICY "admins can update projects"
   ON projects FOR UPDATE
   USING (public.is_org_admin(organization_id));
 
+DROP POLICY IF EXISTS "owners can delete projects" ON projects;
 CREATE POLICY "owners can delete projects"
   ON projects FOR DELETE
   USING (public.user_role_in_org(organization_id) = 'owner');
 
 -- invitations
+DROP POLICY IF EXISTS "admins can read invitations" ON invitations;
 CREATE POLICY "admins can read invitations"
   ON invitations FOR SELECT
   USING (public.is_org_admin(organization_id));
 
+DROP POLICY IF EXISTS "admins can create invitations" ON invitations;
 CREATE POLICY "admins can create invitations"
   ON invitations FOR INSERT
   WITH CHECK (public.is_org_admin(organization_id));
 
+DROP POLICY IF EXISTS "admins can update invitations" ON invitations;
 CREATE POLICY "admins can update invitations"
   ON invitations FOR UPDATE
   USING (public.is_org_admin(organization_id));
 
 -- audit_logs
+DROP POLICY IF EXISTS "admins can read audit logs" ON audit_logs;
 CREATE POLICY "admins can read audit logs"
   ON audit_logs FOR SELECT
   USING (public.is_org_admin(organization_id));
 
+DROP POLICY IF EXISTS "members can insert audit logs" ON audit_logs;
 CREATE POLICY "members can insert audit logs"
   ON audit_logs FOR INSERT
   WITH CHECK (organization_id = ANY(public.user_org_ids()));

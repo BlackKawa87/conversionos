@@ -1,18 +1,47 @@
 {
-  "app":  { "name": "ConversionOS", "tagline": "Conversion Intelligence Platform" },
+  "app": {
+    "name": "ConversionOS",
+    "tagline": "Conversion Intelligence Platform"
+  },
   "auth": {
-    "signIn": "Sign in", "signOut": "Sign out", "signUp": "Create account",
-    "email": "Email address", "password": "Password",
+    "signIn": "Sign in",
+    "signOut": "Sign out",
+    "signUp": "Create account",
+    "email": "Email address",
+    "password": "Password",
     "forgotPassword": "Forgot password?",
     "magicLink": "Send magic link",
     "magicLinkSent": "Check your email for the login link.",
-    "loading": "Loading…"
+    "loading": "Loading…",
+    "welcome": "Welcome back",
+    "signInContinue": "Sign in to continue to ConversionOS",
+    "headline": "Find where your funnel is leaking revenue.",
+    "subheadline": "ConversionOS diagnoses drop-offs, friction points and revenue leaks across your digital funnels.",
+    "benefit1": "Diagnose funnel leaks.",
+    "benefit2": "Prioritize what to fix first.",
+    "benefit3": "Turn data into action plans.",
+    "sampleBadge": "Sample",
+    "enterWithPassword": "Sign in with password",
+    "switchToMagicLink": "Send magic link instead",
+    "switchToPassword": "Sign in with password instead"
   },
-  "nav":  { "dashboard": "Dashboard", "projects": "Projects", "settings": "Settings" },
+  "nav": {
+    "dashboard": "Dashboard",
+    "projects": "Projects",
+    "settings": "Settings"
+  },
   "common": {
-    "save": "Save", "cancel": "Cancel", "delete": "Delete", "edit": "Edit",
-    "loading": "Loading…", "error": "Something went wrong.", "success": "Done!",
-    "copy": "Copy", "copied": "Copied!", "done": "Done", "home": "Go home"
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "loading": "Loading…",
+    "error": "Something went wrong.",
+    "success": "Done!",
+    "copy": "Copy",
+    "copied": "Copied!",
+    "done": "Done",
+    "home": "Go home"
   },
   "onboarding": {
     "title": "Create your organization",
@@ -25,37 +54,37 @@
   },
   "project": {
     "createTitle": "New project",
-    "createDesc":  "Projects represent funnels or products you want to optimize.",
-    "name":        "Project name",
+    "createDesc": "Projects represent funnels or products you want to optimize.",
+    "name": "Project name",
     "description": "Description",
     "descPlaceholder": "What is this project optimizing?",
-    "domain":      "Domain (optional)",
-    "create":      "Create project",
-    "created":     "Project created!",
-    "archived":    "Project archived",
-    "new":         "New project",
-    "emptyTitle":  "No projects yet",
-    "emptyDesc":   "Create your first project to start tracking conversions."
+    "domain": "Domain (optional)",
+    "create": "Create project",
+    "created": "Project created!",
+    "archived": "Project archived",
+    "new": "New project",
+    "emptyTitle": "No projects yet",
+    "emptyDesc": "Create your first project to start tracking conversions."
   },
   "invite": {
-    "title":       "Invite team member",
-    "desc":        "They will receive a link to join your organization.",
-    "email":       "Email address",
-    "role":        "Role",
-    "send":        "Create invitation",
-    "created":     "Invitation created!",
-    "linkReady":   "Share this link with",
-    "accepting":   "Accepting invitation…",
-    "accepted":    "Invitation accepted!",
+    "title": "Invite team member",
+    "desc": "They will receive a link to join your organization.",
+    "email": "Email address",
+    "role": "Role",
+    "send": "Create invitation",
+    "created": "Invitation created!",
+    "linkReady": "Share this link with",
+    "accepting": "Accepting invitation…",
+    "accepted": "Invitation accepted!",
     "successTitle": "You are in!",
     "successDesc": "Your membership is active. Go to the dashboard to get started.",
     "goDashboard": "Go to dashboard",
-    "errorTitle":  "Invitation error",
-    "errorDesc":   "This invitation may have expired or already been used."
+    "errorTitle": "Invitation error",
+    "errorDesc": "This invitation may have expired or already been used."
   },
   "members": {
-    "title":      "Members",
-    "invite":     "Invite",
+    "title": "Members",
+    "invite": "Invite",
     "emptyTitle": "No members yet"
   },
   "dashboard": {

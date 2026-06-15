@@ -1,18 +1,47 @@
 {
-  "app":  { "name": "ConversionOS", "tagline": "Plataforma de Inteligência de Conversão" },
+  "app": {
+    "name": "ConversionOS",
+    "tagline": "Plataforma de Inteligência de Conversão"
+  },
   "auth": {
-    "signIn": "Entrar", "signOut": "Sair", "signUp": "Criar conta",
-    "email": "E-mail", "password": "Senha",
+    "signIn": "Entrar",
+    "signOut": "Sair",
+    "signUp": "Criar conta",
+    "email": "E-mail",
+    "password": "Senha",
     "forgotPassword": "Esqueci minha senha",
     "magicLink": "Enviar link mágico",
     "magicLinkSent": "Verifique seu e-mail para o link de acesso.",
-    "loading": "Carregando…"
+    "loading": "Carregando…",
+    "welcome": "Bem-vindo de volta",
+    "signInContinue": "Faça login para continuar no ConversionOS",
+    "headline": "Descubra onde seu funil está perdendo receita.",
+    "subheadline": "O ConversionOS diagnostica abandono, fricções e vazamentos de receita nos seus funis digitais.",
+    "benefit1": "Diagnostique vazamentos no funil.",
+    "benefit2": "Priorize o que corrigir primeiro.",
+    "benefit3": "Transforme dados em planos de ação.",
+    "sampleBadge": "Exemplo",
+    "enterWithPassword": "Entrar com senha",
+    "switchToMagicLink": "Enviar link mágico",
+    "switchToPassword": "Entrar com senha"
   },
-  "nav":  { "dashboard": "Painel", "projects": "Projetos", "settings": "Configurações" },
+  "nav": {
+    "dashboard": "Painel",
+    "projects": "Projetos",
+    "settings": "Configurações"
+  },
   "common": {
-    "save": "Salvar", "cancel": "Cancelar", "delete": "Excluir", "edit": "Editar",
-    "loading": "Carregando…", "error": "Algo deu errado.", "success": "Feito!",
-    "copy": "Copiar", "copied": "Copiado!", "done": "Concluído", "home": "Ir para início"
+    "save": "Salvar",
+    "cancel": "Cancelar",
+    "delete": "Excluir",
+    "edit": "Editar",
+    "loading": "Carregando…",
+    "error": "Algo deu errado.",
+    "success": "Feito!",
+    "copy": "Copiar",
+    "copied": "Copiado!",
+    "done": "Concluído",
+    "home": "Ir para início"
   },
   "onboarding": {
     "title": "Crie sua organização",
@@ -25,37 +54,37 @@
   },
   "project": {
     "createTitle": "Novo projeto",
-    "createDesc":  "Projetos representam funis ou produtos que você quer otimizar.",
-    "name":        "Nome do projeto",
+    "createDesc": "Projetos representam funis ou produtos que você quer otimizar.",
+    "name": "Nome do projeto",
     "description": "Descrição",
     "descPlaceholder": "O que este projeto está otimizando?",
-    "domain":      "Domínio (opcional)",
-    "create":      "Criar projeto",
-    "created":     "Projeto criado!",
-    "archived":    "Projeto arquivado",
-    "new":         "Novo projeto",
-    "emptyTitle":  "Nenhum projeto ainda",
-    "emptyDesc":   "Crie seu primeiro projeto para rastrear conversões."
+    "domain": "Domínio (opcional)",
+    "create": "Criar projeto",
+    "created": "Projeto criado!",
+    "archived": "Projeto arquivado",
+    "new": "Novo projeto",
+    "emptyTitle": "Nenhum projeto ainda",
+    "emptyDesc": "Crie seu primeiro projeto para rastrear conversões."
   },
   "invite": {
-    "title":       "Convidar membro",
-    "desc":        "Eles receberão um link para entrar na organização.",
-    "email":       "E-mail",
-    "role":        "Papel",
-    "send":        "Criar convite",
-    "created":     "Convite criado!",
-    "linkReady":   "Compartilhe este link com",
-    "accepting":   "Aceitando convite…",
-    "accepted":    "Convite aceito!",
+    "title": "Convidar membro",
+    "desc": "Eles receberão um link para entrar na organização.",
+    "email": "E-mail",
+    "role": "Papel",
+    "send": "Criar convite",
+    "created": "Convite criado!",
+    "linkReady": "Compartilhe este link com",
+    "accepting": "Aceitando convite…",
+    "accepted": "Convite aceito!",
     "successTitle": "Você entrou!",
     "successDesc": "Sua participação está ativa.",
     "goDashboard": "Ir para o painel",
-    "errorTitle":  "Erro no convite",
-    "errorDesc":   "Este convite pode ter expirado ou já foi usado."
+    "errorTitle": "Erro no convite",
+    "errorDesc": "Este convite pode ter expirado ou já foi usado."
   },
   "members": {
-    "title":      "Membros",
-    "invite":     "Convidar",
+    "title": "Membros",
+    "invite": "Convidar",
     "emptyTitle": "Nenhum membro ainda"
   },
   "dashboard": {

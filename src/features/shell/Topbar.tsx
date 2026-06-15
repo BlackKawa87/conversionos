@@ -3,10 +3,25 @@ import { Menu, LogOut, User, Sun, Moon } from 'lucide-react'
 import { supabase } from '@/providers/supabase'
 import { useTheme } from '@/hooks/useTheme'
 import { LanguageSwitcher } from './LanguageSwitcher'
+import { DEV_BYPASS_ACTIVE } from '@/features/auth/devBypass'
 
 interface TopbarProps {
   onMenuToggle: () => void
   orgName?: string
+}
+
+// REMOVE OR DISABLE BEFORE GO LIVE
+const devBadgeStyle: React.CSSProperties = {
+  display: 'inline-flex', alignItems: 'center',
+  padding: '0.1875rem 0.5rem',
+  background: 'rgba(245, 158, 11, 0.12)',
+  border: '1px solid rgba(245, 158, 11, 0.5)',
+  borderRadius: 'var(--radius-full)',
+  fontSize: '0.6875rem', fontWeight: 700,
+  color: '#f59e0b',
+  letterSpacing: '0.04em',
+  fontFamily: 'var(--font-mono)',
+  flexShrink: 0,
 }
 
 export function Topbar({ onMenuToggle, orgName }: TopbarProps) {
@@ -54,6 +69,13 @@ export function Topbar({ onMenuToggle, orgName }: TopbarProps) {
       <span style={{ fontSize: 'var(--text-sm)', fontWeight: 600, color: 'var(--color-text-primary)', flex: 1, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
         {orgName ?? 'ConversionOS'}
       </span>
+
+      {/* Dev bypass badge — REMOVE OR DISABLE BEFORE GO LIVE */}
+      {DEV_BYPASS_ACTIVE && (
+        <span style={devBadgeStyle} role="status" aria-label="Development auth bypass active">
+          Auth Disabled — Dev Only
+        </span>
+      )}
 
       {/* Right controls */}
       <div style={{ display: 'flex', alignItems: 'center', gap: '0.375rem' }}>

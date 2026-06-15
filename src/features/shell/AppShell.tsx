@@ -13,7 +13,7 @@ export function AppShell({ children, orgName }: AppShellProps) {
   return (
     <>
       <Topbar onMenuToggle={() => setSidebarOpen(o => !o)} orgName={orgName} />
-      <Sidebar open={sidebarOpen} onClose={() => setSidebarOpen(false)} />
+      <Sidebar open={sidebarOpen} onClose={() => setSidebarOpen(false)} orgName={orgName} />
 
       <main
         style={{

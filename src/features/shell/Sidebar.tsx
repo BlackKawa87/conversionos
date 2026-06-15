@@ -2,7 +2,7 @@ import { NavLink } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import {
   LayoutDashboard, Brain, ListChecks, FlaskConical,
-  FolderKanban, Bell, Settings, X,
+  FolderKanban, Bell, Settings, X, ChevronDown,
 } from 'lucide-react'
 
 type NavGroup = {
@@ -14,23 +14,23 @@ const NAV_GROUPS: NavGroup[] = [
   {
     groupKey: 'intelligence',
     items: [
-      { key: 'overview',     to: '/',             icon: <LayoutDashboard size={15} aria-hidden />, end: true },
-      { key: 'diagnoses',    to: '/diagnoses',    icon: <Brain           size={15} aria-hidden /> },
-      { key: 'actionPlan',   to: '/action-plan',  icon: <ListChecks      size={15} aria-hidden /> },
-      { key: 'experiments',  to: '/experiments',  icon: <FlaskConical    size={15} aria-hidden /> },
+      { key: 'overview',    to: '/',            icon: <LayoutDashboard size={16} aria-hidden />, end: true },
+      { key: 'diagnoses',   to: '/diagnoses',   icon: <Brain           size={16} aria-hidden /> },
+      { key: 'actionPlan',  to: '/action-plan', icon: <ListChecks      size={16} aria-hidden /> },
+      { key: 'experiments', to: '/experiments', icon: <FlaskConical    size={16} aria-hidden /> },
     ],
   },
   {
     groupKey: 'tracking',
     items: [
-      { key: 'projects', to: '/projects', icon: <FolderKanban size={15} aria-hidden /> },
+      { key: 'projects', to: '/projects', icon: <FolderKanban size={16} aria-hidden /> },
     ],
   },
   {
     groupKey: 'system',
     items: [
-      { key: 'alerts',   to: '/alerts',   icon: <Bell     size={15} aria-hidden /> },
-      { key: 'settings', to: '/settings', icon: <Settings size={15} aria-hidden /> },
+      { key: 'alerts',   to: '/alerts',   icon: <Bell     size={16} aria-hidden /> },
+      { key: 'settings', to: '/settings', icon: <Settings size={16} aria-hidden /> },
     ],
   },
 ]
@@ -38,16 +38,17 @@ const NAV_GROUPS: NavGroup[] = [
 interface SidebarProps {
   open: boolean
   onClose: () => void
+  orgName?: string
 }
 
-export function Sidebar({ open, onClose }: SidebarProps) {
+export function Sidebar({ open, onClose, orgName }: SidebarProps) {
   const { t } = useTranslation('shell')
 
   const navLinkStyle = (isActive: boolean): React.CSSProperties => ({
-    display: 'flex', alignItems: 'center', gap: '0.5rem',
+    display: 'flex', alignItems: 'center', gap: '0.5625rem',
     padding: '0.4375rem 0.75rem',
     borderRadius: 'var(--radius-md)',
-    fontSize: 'var(--text-sm)', fontWeight: 500,
+    fontSize: 'var(--text-sm)', fontWeight: isActive ? 500 : 400,
     color:      isActive ? 'var(--color-accent)' : 'var(--color-text-secondary)',
     background: isActive ? 'var(--color-accent-light)' : 'transparent',
     transition: 'background var(--transition-fast), color var(--transition-fast)',
@@ -55,8 +56,8 @@ export function Sidebar({ open, onClose }: SidebarProps) {
   })
 
   const groupLabelStyle: React.CSSProperties = {
-    fontSize: 'var(--text-2xs)', fontWeight: 700,
-    letterSpacing: '0.1em', textTransform: 'uppercase',
+    fontSize: 'var(--text-2xs)', fontWeight: 600,
+    letterSpacing: '0.09em', textTransform: 'uppercase',
     color: 'var(--color-text-faint)', fontFamily: 'var(--font-mono)',
     padding: '0 0.75rem', marginBottom: '0.25rem',
   }
@@ -87,35 +88,58 @@ export function Sidebar({ open, onClose }: SidebarProps) {
           transition: 'transform var(--transition-base)',
         }}
       >
-        {/* Logo */}
+        {/* ── Workspace header ── */}
         <div style={{
           height: 'var(--topbar-height)',
           display: 'flex', alignItems: 'center', justifyContent: 'space-between',
-          padding: '0 1rem', borderBottom: '1px solid var(--color-border)',
-          flexShrink: 0,
+          padding: '0 0.875rem', borderBottom: '1px solid var(--color-border)',
+          flexShrink: 0, gap: '0.5rem',
         }}>
-          <span style={{ fontFamily: 'var(--font-heading)', fontSize: 'var(--text-lg)', color: 'var(--color-brand)', letterSpacing: '-0.01em' }}>
-            ConversionOS
-          </span>
-          <button
-            onClick={onClose}
-            aria-label={t('nav.close', 'Close menu')}
-            className="sidebar-close-btn"
-            style={{ background: 'none', border: 'none', color: 'var(--color-text-muted)', cursor: 'pointer', display: 'none', padding: '0.25rem' }}
-          >
-            <X size={16} />
-          </button>
+          <div style={{ minWidth: 0, flex: 1, overflow: 'hidden' }}>
+            <div style={{
+              fontWeight: 800,
+              fontSize: '0.9375rem',
+              color: 'var(--color-brand)',
+              letterSpacing: '-0.03em',
+              whiteSpace: 'nowrap',
+              lineHeight: 1.2,
+            }}>
+              ConversionOS
+            </div>
+            {orgName && (
+              <div style={{
+                fontSize: 'var(--text-2xs)',
+                color: 'var(--color-text-faint)',
+                overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap',
+                marginTop: '0.0625rem',
+                fontWeight: 400,
+              }}>
+                {orgName}
+              </div>
+            )}
+          </div>
+
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.25rem', flexShrink: 0 }}>
+            {orgName && <ChevronDown size={12} color="var(--color-text-faint)" aria-hidden />}
+            <button
+              onClick={onClose}
+              aria-label={t('nav.close', 'Close menu')}
+              className="sidebar-close-btn"
+              style={{ background: 'none', border: 'none', color: 'var(--color-text-muted)', cursor: 'pointer', display: 'none', padding: '0.25rem', borderRadius: 'var(--radius-sm)' }}
+            >
+              <X size={15} />
+            </button>
+          </div>
         </div>
 
-        {/* Nav groups */}
+        {/* ── Nav groups ── */}
         <div style={{ flex: 1, overflowY: 'auto', padding: '0.875rem 0.5rem', display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
           {NAV_GROUPS.map((group, gi) => (
             <div key={group.groupKey}>
-              {/* Group label — always visible, helps communicate product purpose */}
               <p style={{ ...groupLabelStyle, marginTop: gi === 0 ? 0 : undefined }}>
                 {t(`nav.groups.${group.groupKey}`, group.groupKey)}
               </p>
-              <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.125rem' }}>
+              <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.0625rem' }}>
                 {group.items.map(item => (
                   <li key={item.key}>
                     <NavLink
@@ -124,12 +148,14 @@ export function Sidebar({ open, onClose }: SidebarProps) {
                       onClick={onClose}
                       style={({ isActive }) => navLinkStyle(isActive)}
                       onMouseEnter={e => {
-                        if (!e.currentTarget.classList.contains('active'))
-                          e.currentTarget.style.background = 'var(--color-bg-hover)'
+                        const el = e.currentTarget
+                        if (el.getAttribute('aria-current') !== 'page')
+                          el.style.background = 'var(--color-bg-hover)'
                       }}
                       onMouseLeave={e => {
-                        if (!e.currentTarget.classList.contains('active'))
-                          e.currentTarget.style.background = 'transparent'
+                        const el = e.currentTarget
+                        if (el.getAttribute('aria-current') !== 'page')
+                          el.style.background = 'transparent'
                       }}
                     >
                       {item.icon}
@@ -141,6 +167,22 @@ export function Sidebar({ open, onClose }: SidebarProps) {
             </div>
           ))}
         </div>
+
+        {/* ── Footer hint ── */}
+        <div style={{
+          padding: '0.75rem 1rem',
+          borderTop: '1px solid var(--color-border)',
+          flexShrink: 0,
+        }}>
+          <p style={{
+            fontSize: 'var(--text-2xs)',
+            color: 'var(--color-text-faint)',
+            fontFamily: 'var(--font-mono)',
+            letterSpacing: '0.04em',
+          }}>
+            v0.1 · ECC Alpha
+          </p>
+        </div>
       </nav>
 
       <style>{`
@@ -149,7 +191,7 @@ export function Sidebar({ open, onClose }: SidebarProps) {
             transform: ${open ? 'translateX(0)' : 'translateX(-100%)'};
             z-index: 200;
           }
-          .sidebar-overlay  { display: block !important; }
+          .sidebar-overlay   { display: block !important; }
           .sidebar-close-btn { display: flex !important; }
         }
       `}</style>

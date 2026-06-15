@@ -253,17 +253,41 @@ export default function DashboardPage() {
   return (
     <div style={{ maxWidth: 1100, display: 'flex', flexDirection: 'column', gap: '2rem' }}>
 
-      {/* ── PAGE HEADER ─────────────────────────────────────────────────── */}
-      <div>
-        <p style={{ fontSize: 'var(--text-sm)', color: 'var(--color-text-muted)', marginBottom: '0.125rem' }}>
-          {greeting}, <strong style={{ color: 'var(--color-text-primary)' }}>{orgFirstName}</strong>
-        </p>
-        <h1 style={{ fontFamily: 'var(--font-heading)', fontSize: 'var(--text-2xl)', color: 'var(--color-text-primary)', lineHeight: 1.25 }}>
-          {tC('app.name', 'ConversionOS')}
-        </h1>
-        <p style={{ fontSize: 'var(--text-sm)', color: 'var(--color-text-faint)', marginTop: '0.125rem' }}>
-          {tC('app.tagline', 'Conversion Intelligence Platform')}
-        </p>
+      {/* ── PAGE HEADER V3 ──────────────────────────────────────────────── */}
+      <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', flexWrap: 'wrap', gap: '0.75rem', paddingBottom: '1.5rem', borderBottom: '1px solid var(--color-border)' }}>
+        <div>
+          <p style={{
+            fontSize: 'var(--text-2xs)', fontWeight: 600,
+            color: 'var(--color-text-faint)', letterSpacing: '0.09em',
+            textTransform: 'uppercase', fontFamily: 'var(--font-mono)',
+            marginBottom: '0.5rem',
+          }}>
+            {tC('app.tagline', 'Conversion Intelligence Platform')}
+          </p>
+          <h1 style={{
+            fontSize: 'clamp(1.625rem, 3vw, 2.25rem)',
+            fontWeight: 800,
+            color: 'var(--color-text-primary)',
+            lineHeight: 1.1,
+            letterSpacing: '-0.035em',
+          }}>
+            {greeting}, {orgFirstName}
+          </h1>
+        </div>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', paddingBottom: '0.25rem' }}>
+          <span style={{
+            display: 'inline-flex', alignItems: 'center',
+            padding: '0.25rem 0.625rem',
+            background: 'var(--color-success-dim)',
+            border: '1px solid var(--color-success)',
+            borderRadius: 'var(--radius-full)',
+            fontSize: 'var(--text-2xs)', fontWeight: 600,
+            color: 'var(--color-success-text)',
+            fontFamily: 'var(--font-mono)', letterSpacing: '0.04em',
+          }}>
+            {org.name}
+          </span>
+        </div>
       </div>
 
       {/* ── BLOCK 1: HERO DIAGNOSIS ─────────────────────────────────────── */}

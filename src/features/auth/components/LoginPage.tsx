@@ -101,7 +101,7 @@ function StoryPanel() {
         <p style={{ fontFamily: 'var(--font-mono)', color: 'rgba(255,255,255,0.35)', fontSize: '0.6875rem', letterSpacing: '0.12em', textTransform: 'uppercase', marginBottom: '0.375rem' }}>
           Conversion Intelligence Platform
         </p>
-        <span style={{ fontFamily: 'var(--font-heading)', fontSize: '1.75rem', color: '#fff', letterSpacing: '-0.01em' }}>
+        <span style={{ fontWeight: 800, fontSize: '1.375rem', color: '#fff', letterSpacing: '-0.04em' }}>
           ConversionOS
         </span>
       </div>
@@ -225,7 +225,7 @@ export default function LoginPage() {
                     <Badge variant="warning">DEV — Password Login Active</Badge>
                   </div>
                 )}
-                <h2 style={{ fontFamily: 'var(--font-heading)', fontSize: '1.5rem', color: 'var(--color-text-primary)', marginBottom: '0.3rem', letterSpacing: '-0.01em' }}>
+                <h2 style={{ fontWeight: 800, fontSize: '1.375rem', color: 'var(--color-text-primary)', marginBottom: '0.3rem', letterSpacing: '-0.035em' }}>
                   {t('auth.welcome')}
                 </h2>
                 <p style={{ color: 'var(--color-text-secondary)', fontSize: 'var(--text-sm)' }}>

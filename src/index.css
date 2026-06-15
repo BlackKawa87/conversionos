@@ -1,11 +1,11 @@
 /* ═══════════════════════════════════════════════════════════════════
-   ConversionOS — Design System V2 Tokens
+   ConversionOS — Design System V3 Tokens
    Light mode is default.  Dark mode activates with [data-theme="dark"].
    All components use CSS custom properties — never hardcode hex values.
 ═══════════════════════════════════════════════════════════════════ */
 
 /* ── Google Fonts ─────────────────────────────────────────────────── */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=DM+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
 
 /* ─────────────────────────────────────────────────────────────────── */
 /* LIGHT MODE (default)                                               */
@@ -79,9 +79,9 @@
   --color-text-warning:   #B45309;
 
   /* ── TYPOGRAPHY ──────────────────────────────────────────── */
-  --font-heading: "Instrument Serif", Georgia, serif;
+  --font-heading: "Inter", system-ui, -apple-system, sans-serif;
   --font-body:    "Inter", system-ui, -apple-system, sans-serif;
-  --font-mono:    "DM Mono", "Fira Code", "Courier New", monospace;
+  --font-mono:    "JetBrains Mono", "Fira Code", "Courier New", monospace;
 
   /* Text scale (px equivalent in comments) */
   --text-2xs:  0.625rem;    /* 10 */
@@ -108,6 +108,7 @@
   --weight-medium:   500;
   --weight-semibold: 600;
   --weight-bold:     700;
+  --weight-display:  800;
 
   /* ── SPACING ─────────────────────────────────────────────── */
   --space-1:  0.25rem;
